@@ -1,5 +1,14 @@
 {
+  "name": "dashboard",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
   "dependencies": {
     "chart.js": "^4.4.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
   }
 }
