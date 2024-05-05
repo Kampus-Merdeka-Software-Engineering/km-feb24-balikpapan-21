@@ -38,7 +38,7 @@
                         <option value="">1 Bulan terakhir</option>
                     </select>
                 </div>
-                <canvas id="myChart-1"></canvas>
+                <canvas id="myChart"></canvas>
             </div>
         </div>
         <div class="wrap-chart">
@@ -52,11 +52,71 @@
                         <option value="">1 Bulan terakhir</option>
                     </select>
                 </div>
-                <canvas id="myChart-2"></canvas>
+                <canvas id="myChart-1"></canvas>
             </div>
         </div>
     </section>
 
-    <script type="module" src="../Balikpapan-21/js/main.js"></script>
+    <section class="container">
+        <div class="title">
+            <h2>Laporan Dari Cabang Balikpapan</h2>
+        </div>
+        <div class="wrap-chart">
+            <div class="content">
+                <h2>Chart Penjualan</h2>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <div class="wrap-chart">
+            <div class="content">
+                <h2>Chart Pengunjung Harian</h2>
+                <canvas id="myChart-1"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+        const ctx1 = document.getElementById('myChart-1');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Januari', 'Febuari', 'Maret', 'April', 'Mei', 'Juni'],
+            datasets: [{
+              label: 'Penjualan Pizza',
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+              labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+              datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+      </script>
 </body>
 </html>
