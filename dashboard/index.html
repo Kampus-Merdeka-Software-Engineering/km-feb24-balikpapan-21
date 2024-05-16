@@ -6,6 +6,8 @@
   <title>Pizza Sales Dashboard</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="container">
@@ -14,9 +16,6 @@
         <div class="logo">
           <img src="pizza.png">
           <h2 class="name">PIZZA SALES</h2>
-        </div>
-        <div class="close" id="cls-btn">
-          <span class="material-icons-sharp">close</span>
         </div>
       </div>
       <div class="sidebar">
@@ -40,8 +39,14 @@
     </aside>
     <main>
       <h1>Dashboard Balikpapan 21</h1>
+      <div class="bar">
       <div class="date">
         <input type="date">
+      </div>
+      <div class="theme-btn">
+        <span class="material-icons-sharp active">light_mode</span>
+        <span class="material-icons-sharp">dark_mode</span>
+      </div>
       </div>
       <div class="insights">
         <div class="sales">
@@ -60,20 +65,21 @@
               <h1>$817.860</h1>
           </div>
         <div class="abs">
-          <span class="material-icons-sharp">shopping-basket</span>
+          <span class="material-icons-sharp">shopping_basket</span>
               <h3>ABS</h3>
               <h1>2,32</h1>
         </div>
         <div class="aov">
-          <span class="material-icons-sharp">query-stats</span>
+          <span class="material-icons-sharp">query_stats</span>
                 <h3>AOV</h3>
                 <h1>459,9</h1>
           </div>
         </div>
-      </div>
 
-      <div class="revenue-growth">
-        <h2>Revenue Growth Over Time</h2>
+      <div class="Chart">
+        <h2 class="quantity">Quantity Growth</h2>
+      <canvas id="chart"></canvas>
+      
       </div>
     </main>
   </div>
