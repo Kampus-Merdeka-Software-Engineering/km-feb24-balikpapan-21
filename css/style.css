@@ -1,74 +1,228 @@
-/* reset css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-nav{
-    width: 100%;
-    height: 60px;
-    background-color: cornflowerblue;
-    padding: 0px 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+html{
+  font-size: 12px;
 }
 
-.list-menu li{
-    display: inline-block;
-    padding: 8px 16px;
-    margin: 0px 6px;
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  font-size: 12px;
+  background-color: #f6f6f9;
+  user-select: none;
+  overflow-x: hidden;
+  color: #363949;
 }
 
-.list-menu li a{
-    text-decoration: none;
+p{
+  color: #677483;
 }
 
+a{
+  color: black;
+}
+
+img{
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+h1{
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2{
+  font-size: 1.4rem;
+}
+
+h3{
+  font-size: 0.87rem;
+}
+
+.name{
+  margin: auto;
+}
 
 .container{
-    width:100%;
-    min-height: 400px;
-    padding: 20px 80px;
-    display: flex;
-    flex-wrap: wrap;
+  display: grid;
+  margin: 0 auto;
+  width: 98%;
+  gap: 30px;
+  grid-template-columns: 14rem auto 23rem;
 }
 
-.title{
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
+aside{
+  height: 100vh;
+  background: #bb2222;
 }
 
-.wrap-chart{
-    width: 50%;
-    height: 400px;
-    padding: 16px;
+aside h3{
+  font-weight: 500;
 }
 
-.content{
-    width: 100%;
-    height: 100%;
-    border: 2px solid black;
-    border-radius: 12px;
-    padding: 8px;
-    margin-bottom: 12px;
+aside .top{
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
 }
 
-.header-content{
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
+aside .logo{
+  display: flex;
+  gap:0.8rem;
+}
+aside .logo img{
+  width: 6rem;
+  height: 6rem;
 }
 
-.header-content select{
-    width: 150px;
-    height: 40px;
-    outline: none;
-    padding: 0px 8px;
+aside .close{
+  display: none;
+}
+
+aside .sidebar{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 1rem;
+}
+
+aside .sidebar a{
+  display: flex;
+  color: #7d8da1;
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  height: 3.7rem;
+  transition: all 300ms ease;
+}
+
+aside .sidebar a span{
+  font-size: 1.6rem;
+  transition: all 300ms ease;
+}
+
+aside .sidebar a.active{
+  background: rgba(132, 139, 200, 0.18);
+  color: #bb2222;
+  margin-left: 0;
+}
+
+aside .sidebar a.active:before{
+  content: '';
+  width: 6px;
+  height: 100%;
+  background: #bb2222
+}
+
+aside .sidebar a:hover{
+  color: #bb2222;
+}
+
+aside .sidebar a:hover span{
+  margin-left: 1rem;
+  color: #bb2222;
+}
+
+main{
+  margin-top: 1.4rem;
+}
+
+.bar{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50rem; 
+}
+.date{
+ display: inline-block;
+ background: rgba(132, 139, 200, 0.18); 
+ border-radius: 0.4rem;
+ margin-top: 1rem;
+ padding: 0.5rem 1.6rem;
+}
+.theme-btn{
+  display: flex;
+  background: white;
+  padding: 10px;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.theme-btn span{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.theme-btn span active{
+  background: rgba(132, 139, 200, 0.18);
+  border-radius: 0.4rem;
+  color: white;
+}
+
+.date input[type='date']{
+  background: transparent;
+  color: #363949;
+}
+
+.insights{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem; 
+}
+main .insights > div{
+background: white;
+border-radius: 2rem;
+padding: 1.5rem;
+margin-top: 1rem;
+box-shadow: 0 2rem 2rem rgba(132, 139, 200, 0.18);
+transition: all 300ms ease;
+}
+
+main .insights > div:hover{
+  box-shadow: none;
+} 
+
+main .insights > div span{
+  background: #bb2222;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.quantity{
+  padding: 0.8rem;
+}
+
+#chart{
+  background: white;
+  max-width: 100%;
+  height: auto;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 2rem 2rem rgba(132, 139, 200, 0.18);
 }
