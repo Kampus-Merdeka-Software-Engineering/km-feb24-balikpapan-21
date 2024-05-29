@@ -10,15 +10,11 @@
   box-sizing: border-box;
 }
 
-html{
-  font-size: 12px;
-}
-
 body{
   width: 100vw;
   height: 100vh;
   font-family: poppins, sans-serif;
-  font-size: 12px;
+  font-size: 1rem;
   background-color: #f6f6f9;
   user-select: none;
   overflow-x: hidden;
@@ -225,4 +221,44 @@ main .insights > div span{
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 2rem 2rem rgba(132, 139, 200, 0.18);
+}
+
+.headBar {
+  background-color: #bb2222;
+}
+
+.headBar h1{
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: #f6f6f9;
+  font-family:'Courier New', Courier, monospace
+}
+
+.headBar img{
+  display: inline;
+  width: 8%;
+  margin: auto;
+}
+
+.navbar ul{
+  border: #363949;
+  background-color: antiquewhite;
+  padding: 0%;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.navbar a{
+  color: black;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 15px;
+  display: grid;
+  text-align: center;
+  
+}
+
+.navbar li{
+  float: right;
 }
