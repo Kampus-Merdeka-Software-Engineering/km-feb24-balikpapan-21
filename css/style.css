@@ -14,11 +14,31 @@ body{
   width: 100vw;
   height: 100vh;
   font-family: poppins, sans-serif;
-  font-size: 1rem;
+  font-size: 12px;
   background-color: #f6f6f9;
   user-select: none;
   overflow-x: hidden;
   color: #363949;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th{
+  background-color: rgb(248, 226, 31);
+  border: 1px solid black;
+  padding: 0.8rem;
+}
+
+td{
+  padding: 0.8rem;
+  border: 1px solid black
+}
+
+tr td:first-child{
+  text-align: center;
 }
 
 p{
@@ -37,7 +57,8 @@ img{
 
 h1{
   font-weight: 800;
-  font-size: 1.8rem;
+  font-style: bold;
+  font-size: 2rem;
 }
 
 h2{
@@ -57,12 +78,15 @@ h3{
   margin: 0 auto;
   width: 98%;
   gap: 30px;
-  grid-template-columns: 14rem auto 23rem;
+  grid-template-columns: 16rem auto 0rem;
 }
 
 aside{
   height: 100vh;
   background: #bb2222;
+  position: sticky;
+  top: 0;
+  left: 2rem;
 }
 
 aside h3{
@@ -73,25 +97,22 @@ aside .top{
   background: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 1.4rem;
 }
 
 aside .logo{
-  display: flex;
-  gap:0.8rem;
+  display: grid;
+  padding: 10px;
 }
 aside .logo img{
-  width: 6rem;
-  height: 6rem;
-}
-
-aside .close{
-  display: none;
+  width: 7rem;
+  height: 7rem;
+  margin-left: 1rem;
 }
 
 aside .sidebar{
-  background: white;
+  background: #bb2222;
   display: flex;
   flex-direction: column;
   height: 86vh;
@@ -101,7 +122,7 @@ aside .sidebar{
 
 aside .sidebar a{
   display: flex;
-  color: #7d8da1;
+  color: #ffffff;
   margin-left: 2rem;
   gap: 1rem;
   align-items: center;
@@ -116,16 +137,16 @@ aside .sidebar a span{
 }
 
 aside .sidebar a.active{
-  background: rgba(132, 139, 200, 0.18);
-  color: #bb2222;
-  margin-left: 0;
+  background: white;
+  color: black;
+  margin-left: 1rem;
 }
 
 aside .sidebar a.active:before{
   content: '';
   width: 6px;
   height: 100%;
-  background: #bb2222
+  background: #bb2222;
 }
 
 aside .sidebar a:hover{
@@ -142,45 +163,32 @@ main{
 }
 
 .bar{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50rem; 
-}
-.date{
- display: inline-block;
- background: rgba(132, 139, 200, 0.18); 
- border-radius: 0.4rem;
- margin-top: 1rem;
- padding: 0.5rem 1.6rem;
-}
-.theme-btn{
-  display: flex;
-  background: white;
-  padding: 10px;
-  width: 5rem;
-  height: 3rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.theme-btn span{
-  width: 50%;
+.filter-wrap{
+  width: 70%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.filter{
+  width: 48%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
 }
 
-.theme-btn span active{
-  background: rgba(132, 139, 200, 0.18);
-  border-radius: 0.4rem;
-  color: white;
-}
-
-.date input[type='date']{
-  background: transparent;
-  color: #363949;
+.filter input,
+.filter select{
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 4px;
 }
 
 .insights{
@@ -188,6 +196,7 @@ main{
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem; 
 }
+
 main .insights > div{
 background: white;
 border-radius: 2rem;
@@ -213,52 +222,31 @@ main .insights > div span{
   padding: 0.8rem;
 }
 
-#chart{
-  background: white;
-  max-width: 100%;
-  height: auto;
-  background: white;
+.list-chart{
+  width: 100%;
+  min-height: 500px;
+  margin-top: 32px;
+}
+
+.chart{
+  width: 100%;
+  min-height: 500px;
+  background-color: white;
+  margin-bottom: 32px;
+  box-shadow: 0 2rem 2rem rgba(132, 139, 200, 0.18);
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 2rem 2rem rgba(132, 139, 200, 0.18);
 }
 
-.headBar {
-  background-color: #bb2222;
+#chart,
+#chart-1{
+  max-width: 100%;
+  height: auto;
 }
 
-.headBar h1{
-  text-align: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  color: #f6f6f9;
-  font-family:'Courier New', Courier, monospace
-}
-
-.headBar img{
-  display: inline;
-  width: 8%;
-  margin: auto;
-}
-
-.navbar ul{
-  border: #363949;
-  background-color: antiquewhite;
-  padding: 0%;
-  margin: 0px;
-  overflow: hidden;
-}
-
-.navbar a{
-  color: black;
-  font-weight: normal;
-  text-decoration: none;
-  padding: 15px;
-  display: grid;
-  text-align: center;
-  
-}
-
-.navbar li{
-  float: right;
+#filter_growth{
+  width: 40%;
+  height: 100%;
+  margin-left: 165%;
+  margin-right: 2px;
 }

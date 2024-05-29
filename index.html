@@ -10,19 +10,6 @@
   <script src="script.js"></script>
 </head>
 <body>
-  <header class="headBar">
-    <img src="./img/pizza.png">
-    <h1>PIZZA SALES</h1>
-  </header>
-
-  <nav class="navbar">
-    <ul>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Sales</a></li>
-      <li><a href="#" class="active">Dashboard</a></li>
-    </ul>
-  </nav>
-
   <div class="container">
     <aside>
       <div class="top">
@@ -50,7 +37,6 @@
         </a>
       </div>
     </aside>
-
     <main>
       <h1>Dashboard Balikpapan 21</h1>
       <div class="bar">
@@ -68,34 +54,99 @@
               <h3>Total Sales</h3>
               <h1>49.574</h1>
           </div>
-        <div class="order">
-          <span class="material-icons-sharp">bar_chart</span>
-              <h3>Orders</h3>
-              <h1>21.350</h1>
+
+          <div class="order">
+            <span class="material-icons-sharp">bar_chart</span>
+            <h3>Orders</h3>
+            <h1>21.350</h1>
           </div>
-        <div class="revenue">
-          <span class="material-icons-sharp">show_chart</span>
-              <h3>Total Revenue</h3>
-              <h1>$817.860</h1>
+
+          <div class="revenue">
+            <span class="material-icons-sharp">show_chart</span>
+            <h3>Total Revenue</h3>
+            <h1>$817.860</h1>
           </div>
-        <div class="abs">
-          <span class="material-icons-sharp">shopping_basket</span>
-              <h3>ABS</h3>
-              <h1>2,32</h1>
-        </div>
-        <div class="aov">
-          <span class="material-icons-sharp">query_stats</span>
-                <h3>AOV</h3>
-                <h1>459,9</h1>
+
+          <div class="abs">
+            <span class="material-icons-sharp">shopping_basket</span>
+            <h3>ABS</h3>
+            <h1>2,32</h1>
           </div>
+
+          <div class="aov">
+            <span class="material-icons-sharp">query_stats</span>
+            <h3>AOV</h3>
+            <h1>459,9</h1>
+          </div>
+
         </div>
 
-      <div class="Chart">
-        <h2 class="quantity">Quantity Growth</h2>
-      <canvas id="chart"></canvas>
-      
-      </div>
-    </main>
-  </div>
-</body>
+        <div class="list-chart">
+
+          <div class="chart">
+            <h2 class="quantity">Quantity Growth</h2>
+            <div class="filter">
+              <select name="" id="filter_growth">
+                <option value="01">Semua Kategori</option>
+                <option value="02">Revenue</option>
+                <option value="03">Quantity</option>
+              </select>
+            </div>
+            <canvas id="chart"></canvas>
+          </div>
+  
+          <div class="chart">
+            <h2 class="quantity">Quantity Growth</h2>
+            <canvas id="chart-2"></canvas>
+          </div>
+
+          <div class="chart">
+            <h2 class="quantity">Data Transaksi 100 hari Terakhir</h2>
+            <table id="myTable">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Pizza</th>
+                  <th>Total Terjual</th>
+                  <th>Total Pendapatan</th>
+                </tr>
+              </thead>
+              <tbody>
+               
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+
+    <!-- import jquery and datables cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
+    <script>
+      $(document).ready( function () {
+        let tableBody = document.querySelector('tbody')
+        let templateData = ""
+        
+        for(let i=0; i<100; i++){
+          templateData += `
+            <tr>
+              <td>${1+i}</td>
+              <td>Paperoni ${1+i}</td>
+              <td>${Math.round(Math.random() * 100)}</td>
+              <td>$${Math.round(Math.random(1000) * 100)}</td>
+            </tr>
+          `
+        }
+
+        tableBody.innerHTML = templateData;
+        
+        // inisialisasi data tables
+        $('#myTable').DataTable();
+      });
+    </script>
+  </body>
 </html>
