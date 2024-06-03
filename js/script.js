@@ -1,70 +1,26 @@
-      const chartGrowth = document.getElementById("chartGrowth");
-      const filterMonthly = document.getElementById("filter_monthly");
-      let chartGrowthCanvas = null;
+document.addEventListener('DOMContentLoaded', function () {
+  const menuItems = document.querySelectorAll('.sidebar .menu-item');
 
-      //melakukan update chart
-      const updateChartGrowth = (labels, data, monthly_filter = null) => {
-        let filter_labels = labels;
-        let filter_data = data;
+  // Function to remove active class from all menu items
+  function removeActiveClasses() {
+      menuItems.forEach(item => {
+          item.classList.remove('active');
+      });
+  }
 
-        if(monthly_filter !== null){
-          let index = monthly_filter - 1;
+  // Add click event listener to each menu item
+  menuItems.forEach(item => {
+      item.addEventListener('click', function () {
+          removeActiveClasses();
+          this.classList.add('active');
+      });
+  });
 
-          filter_labels = [];
-          filter_labels.push(lables[index]);
-
-          filter_data = [];
-          filter_data.push(data[index]);
-
-        } else{
-          filter_labels = labels
-          filter_data = data
-        }
-      
-
-      //cek canvas
-      if(chartGrowthCanvas){
-        chartGrowthCanvas.destroy();
+  // Set active class based on current URL
+  const currentPath = window.location.pathname;
+  menuItems.forEach(item => {
+      if (item.getAttribute('href') === currentPath) {
+          item.classList.add('active');
       }
-
-      chartGrowthCanvas = new Chart(chartGrowth, {
-        type : "line",
-        data : {
-            labels : filter_labels,
-            datasets : [
-              {
-                label : 'Quantity and Revenue Growth',
-                data : filter_data,
-                borderWidth : 1
-              }
-            ],
-        },
-      });
-    }
-    
-      //menampilkan data chart
-      const renderChartGrowth = (monthly_filter = null) => {
-        fetch('./json/revenue&quantitygrowth.json')
-        .then((response) => response.json())
-        .then((response) => {
-          let datasets = response.datasets[0]
-          updateChartGrowth(datasets.labels, datasets.data, monthly_filter)
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-      };
-
-      renderChartGrowth();
-
-      //update chart
-      filterMonthly.addEventListener("input", function() {
-        let month = null;
-
-        if (filterMonthly.value !== ""){
-        month = filterMonthly.value;
-        }
-          
-        renderChartGrowth(month);
-      });
-      
+  });
+});
