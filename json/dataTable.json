@@ -1,0 +1,638 @@
+[{
+  "No": 1,
+  "Name": "The Classic Deluxe Pizza",
+  "Size": "S",
+  "Price": 12,
+  "Total Sales": 799,
+  "Total Revenue": 9588
+}, {
+  "No": 2,
+  "Name": "The Classic Deluxe Pizza",
+  "Size": "M",
+  "Price": 16,
+  "Total Sales": 1181,
+  "Total Revenue": 18896
+}, {
+  "No": 3,
+  "Name": "The Classic Deluxe Pizza",
+  "Size": "L",
+  "Price": 20.5,
+  "Total Sales": 473,
+  "Total Revenue": 9696.5
+}, {
+  "No": 4,
+  "Name": "The Barbecue Chicken Pizza",
+  "Size": "S",
+  "Price": 12.75,
+  "Total Sales": 484,
+  "Total Revenue": 6171
+}, {
+  "No": 5,
+  "Name": "The Barbecue Chicken Pizza",
+  "Size": "M",
+  "Price": 16.75,
+  "Total Sales": 956,
+  "Total Revenue": 16013
+}, {
+  "No": 6,
+  "Name": "The Barbecue Chicken Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 992,
+  "Total Revenue": 20584
+}, {
+  "No": 7,
+  "Name": "The Hawaiian Pizza",
+  "Size": "S",
+  "Price": 10.5,
+  "Total Sales": 1020,
+  "Total Revenue": 10710
+}, {
+  "No": 8,
+  "Name": "The Hawaiian Pizza",
+  "Size": "M",
+  "Price": 13.25,
+  "Total Sales": 483,
+  "Total Revenue": 6399.75
+}, {
+  "No": 9,
+  "Name": "The Hawaiian Pizza",
+  "Size": "L",
+  "Price": 16.5,
+  "Total Sales": 919,
+  "Total Revenue": 15163.5
+}, {
+  "No": 10,
+  "Name": "The Pepperoni Pizza",
+  "Size": "S",
+  "Price": 9.75,
+  "Total Sales": 751,
+  "Total Revenue": 7322.25
+}, {
+  "No": 11,
+  "Name": "The Pepperoni Pizza",
+  "Size": "M",
+  "Price": 12.5,
+  "Total Sales": 939,
+  "Total Revenue": 11737.5
+}, {
+  "No": 12,
+  "Name": "The Pepperoni Pizza",
+  "Size": "L",
+  "Price": 15.25,
+  "Total Sales": 728,
+  "Total Revenue": 11102
+}, {
+  "No": 13,
+  "Name": "The Thai Chicken Pizza",
+  "Size": "S",
+  "Price": 12.75,
+  "Total Sales": 480,
+  "Total Revenue": 6120
+}, {
+  "No": 14,
+  "Name": "The Thai Chicken Pizza",
+  "Size": "M",
+  "Price": 16.75,
+  "Total Sales": 481,
+  "Total Revenue": 8056.75
+}, {
+  "No": 15,
+  "Name": "The Thai Chicken Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 1410,
+  "Total Revenue": 29257.5
+}, {
+  "No": 16,
+  "Name": "The California Chicken Pizza",
+  "Size": "S",
+  "Price": 12.75,
+  "Total Sales": 499,
+  "Total Revenue": 6362.25
+}, {
+  "No": 17,
+  "Name": "The California Chicken Pizza",
+  "Size": "M",
+  "Price": 16.75,
+  "Total Sales": 944,
+  "Total Revenue": 15812
+}, {
+  "No": 18,
+  "Name": "The California Chicken Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 927,
+  "Total Revenue": 19235.25
+}, {
+  "No": 19,
+  "Name": "The Sicilian Pizza",
+  "Size": "S",
+  "Price": 12.25,
+  "Total Sales": 751,
+  "Total Revenue": 9199.75
+}, {
+  "No": 20,
+  "Name": "The Sicilian Pizza",
+  "Size": "M",
+  "Price": 16.25,
+  "Total Sales": 574,
+  "Total Revenue": 9327.5
+}, {
+  "No": 21,
+  "Name": "The Sicilian Pizza",
+  "Size": "L",
+  "Price": 20.25,
+  "Total Sales": 613,
+  "Total Revenue": 12413.25
+}, {
+  "No": 22,
+  "Name": "The Spicy Italian Pizza",
+  "Size": "S",
+  "Price": 12.5,
+  "Total Sales": 407,
+  "Total Revenue": 5087.5
+}, {
+  "No": 23,
+  "Name": "The Spicy Italian Pizza",
+  "Size": "M",
+  "Price": 16.5,
+  "Total Sales": 408,
+  "Total Revenue": 6732
+}, {
+  "No": 24,
+  "Name": "The Spicy Italian Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 1109,
+  "Total Revenue": 23011.75
+}, {
+  "No": 25,
+  "Name": "The Southwest Chicken Pizza",
+  "Size": "S",
+  "Price": 12.75,
+  "Total Sales": 367,
+  "Total Revenue": 4679.25
+}, {
+  "No": 26,
+  "Name": "The Southwest Chicken Pizza",
+  "Size": "M",
+  "Price": 16.75,
+  "Total Sales": 534,
+  "Total Revenue": 8944.5
+}, {
+  "No": 27,
+  "Name": "The Southwest Chicken Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 1016,
+  "Total Revenue": 21082
+}, {
+  "No": 28,
+  "Name": "The Big Meat Pizza",
+  "Size": "S",
+  "Price": 12,
+  "Total Sales": 1914,
+  "Total Revenue": 22968
+}, {
+  "No": 29,
+  "Name": "The Four Cheese Pizza",
+  "Size": "M",
+  "Price": 14.75,
+  "Total Sales": 586,
+  "Total Revenue": 8643.5
+}, {
+  "No": 30,
+  "Name": "The Four Cheese Pizza",
+  "Size": "L",
+  "Price": 17.95,
+  "Total Sales": 1316,
+  "Total Revenue": 23622.2
+}, {
+  "No": 31,
+  "Name": "The Italian Supreme Pizza",
+  "Size": "S",
+  "Price": 12.5,
+  "Total Sales": 196,
+  "Total Revenue": 2450
+}, {
+  "No": 32,
+  "Name": "The Italian Supreme Pizza",
+  "Size": "M",
+  "Price": 16.5,
+  "Total Sales": 941,
+  "Total Revenue": 15526.5
+}, {
+  "No": 33,
+  "Name": "The Italian Supreme Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 747,
+  "Total Revenue": 15500.25
+}, {
+  "No": 34,
+  "Name": "The Vegetables + Vegetables Pizza",
+  "Size": "S",
+  "Price": 12,
+  "Total Sales": 464,
+  "Total Revenue": 5568
+}, {
+  "No": 35,
+  "Name": "The Vegetables + Vegetables Pizza",
+  "Size": "M",
+  "Price": 16,
+  "Total Sales": 635,
+  "Total Revenue": 10160
+}, {
+  "No": 36,
+  "Name": "The Vegetables + Vegetables Pizza",
+  "Size": "L",
+  "Price": 20.25,
+  "Total Sales": 427,
+  "Total Revenue": 8646.75
+}, {
+  "No": 37,
+  "Name": "The Mexicana Pizza",
+  "Size": "S",
+  "Price": 12,
+  "Total Sales": 162,
+  "Total Revenue": 1944
+}, {
+  "No": 38,
+  "Name": "The Mexicana Pizza",
+  "Size": "M",
+  "Price": 16,
+  "Total Sales": 455,
+  "Total Revenue": 7280
+}, {
+  "No": 39,
+  "Name": "The Mexicana Pizza",
+  "Size": "L",
+  "Price": 20.25,
+  "Total Sales": 867,
+  "Total Revenue": 17556.75
+}, {
+  "No": 40,
+  "Name": "The Napolitana Pizza",
+  "Size": "S",
+  "Price": 12,
+  "Total Sales": 471,
+  "Total Revenue": 5652
+}, {
+  "No": 41,
+  "Name": "The Napolitana Pizza",
+  "Size": "M",
+  "Price": 16,
+  "Total Sales": 427,
+  "Total Revenue": 6832
+}, {
+  "No": 42,
+  "Name": "The Napolitana Pizza",
+  "Size": "L",
+  "Price": 20.5,
+  "Total Sales": 566,
+  "Total Revenue": 11603
+}, {
+  "No": 43,
+  "Name": "The Prosciutto and Arugula Pizza",
+  "Size": "S",
+  "Price": 12.5,
+  "Total Sales": 424,
+  "Total Revenue": 5300
+}, {
+  "No": 44,
+  "Name": "The Prosciutto and Arugula Pizza",
+  "Size": "M",
+  "Price": 16.5,
+  "Total Sales": 598,
+  "Total Revenue": 9867
+}, {
+  "No": 45,
+  "Name": "The Prosciutto and Arugula Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 435,
+  "Total Revenue": 9026.25
+}, {
+  "No": 46,
+  "Name": "The Spinach and Feta Pizza",
+  "Size": "S",
+  "Price": 12,
+  "Total Sales": 439,
+  "Total Revenue": 5268
+}, {
+  "No": 47,
+  "Name": "The Spinach and Feta Pizza",
+  "Size": "M",
+  "Price": 16,
+  "Total Sales": 562,
+  "Total Revenue": 8992
+}, {
+  "No": 48,
+  "Name": "The Spinach and Feta Pizza",
+  "Size": "L",
+  "Price": 20.25,
+  "Total Sales": 445,
+  "Total Revenue": 9011.25
+}, {
+  "No": 49,
+  "Name": "The Pepper Salami Pizza",
+  "Size": "S",
+  "Price": 12.5,
+  "Total Sales": 322,
+  "Total Revenue": 4025
+}, {
+  "No": 50,
+  "Name": "The Pepper Salami Pizza",
+  "Size": "M",
+  "Price": 16.5,
+  "Total Sales": 428,
+  "Total Revenue": 7062
+}, {
+  "No": 51,
+  "Name": "The Pepper Salami Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 696,
+  "Total Revenue": 14442
+}, {
+  "No": 52,
+  "Name": "The Italian Capocollo Pizza",
+  "Size": "S",
+  "Price": 12,
+  "Total Sales": 302,
+  "Total Revenue": 3624
+}, {
+  "No": 53,
+  "Name": "The Italian Capocollo Pizza",
+  "Size": "M",
+  "Price": 16,
+  "Total Sales": 404,
+  "Total Revenue": 6464
+}, {
+  "No": 54,
+  "Name": "The Italian Capocollo Pizza",
+  "Size": "L",
+  "Price": 20.5,
+  "Total Sales": 732,
+  "Total Revenue": 15006
+}, {
+  "No": 55,
+  "Name": "The Greek Pizza",
+  "Size": "XXL",
+  "Price": 35.95,
+  "Total Sales": 28,
+  "Total Revenue": 1006.6
+}, {
+  "No": 56,
+  "Name": "The Greek Pizza",
+  "Size": "XL",
+  "Price": 25.5,
+  "Total Sales": 552,
+  "Total Revenue": 14076
+}, {
+  "No": 57,
+  "Name": "The Greek Pizza",
+  "Size": "S",
+  "Price": 12,
+  "Total Sales": 304,
+  "Total Revenue": 3648
+}, {
+  "No": 58,
+  "Name": "The Greek Pizza",
+  "Size": "M",
+  "Price": 16,
+  "Total Sales": 281,
+  "Total Revenue": 4496
+}, {
+  "No": 59,
+  "Name": "The Greek Pizza",
+  "Size": "L",
+  "Price": 20.5,
+  "Total Sales": 255,
+  "Total Revenue": 5227.5
+}, {
+  "No": 60,
+  "Name": "The Five Cheese Pizza",
+  "Size": "L",
+  "Price": 18.5,
+  "Total Sales": 1409,
+  "Total Revenue": 26066.5
+}, {
+  "No": 61,
+  "Name": "The Pepperoni, Mushroom, and Peppers Pizza",
+  "Size": "S",
+  "Price": 11,
+  "Total Sales": 578,
+  "Total Revenue": 6358
+}, {
+  "No": 62,
+  "Name": "The Pepperoni, Mushroom, and Peppers Pizza",
+  "Size": "M",
+  "Price": 14.5,
+  "Total Sales": 397,
+  "Total Revenue": 5756.5
+}, {
+  "No": 63,
+  "Name": "The Pepperoni, Mushroom, and Peppers Pizza",
+  "Size": "L",
+  "Price": 17.5,
+  "Total Sales": 384,
+  "Total Revenue": 6720
+}, {
+  "No": 64,
+  "Name": "The Green Garden Pizza",
+  "Size": "S",
+  "Price": 12,
+  "Total Sales": 600,
+  "Total Revenue": 7200
+}, {
+  "No": 65,
+  "Name": "The Green Garden Pizza",
+  "Size": "M",
+  "Price": 16,
+  "Total Sales": 302,
+  "Total Revenue": 4832
+}, {
+  "No": 66,
+  "Name": "The Green Garden Pizza",
+  "Size": "L",
+  "Price": 20.25,
+  "Total Sales": 95,
+  "Total Revenue": 1923.75
+}, {
+  "No": 67,
+  "Name": "The Chicken Alfredo Pizza",
+  "Size": "S",
+  "Price": 12.75,
+  "Total Sales": 96,
+  "Total Revenue": 1224
+}, {
+  "No": 68,
+  "Name": "The Chicken Alfredo Pizza",
+  "Size": "M",
+  "Price": 16.75,
+  "Total Sales": 703,
+  "Total Revenue": 11775.25
+}, {
+  "No": 69,
+  "Name": "The Chicken Alfredo Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 188,
+  "Total Revenue": 3901
+}, {
+  "No": 70,
+  "Name": "The Italian Vegetables Pizza",
+  "Size": "S",
+  "Price": 12.75,
+  "Total Sales": 305,
+  "Total Revenue": 3888.75
+}, {
+  "No": 71,
+  "Name": "The Italian Vegetables Pizza",
+  "Size": "M",
+  "Price": 16.75,
+  "Total Sales": 486,
+  "Total Revenue": 8140.5
+}, {
+  "No": 72,
+  "Name": "The Italian Vegetables Pizza",
+  "Size": "L",
+  "Price": 21,
+  "Total Sales": 190,
+  "Total Revenue": 3990
+}, {
+  "No": 73,
+  "Name": "The Chicken Pesto Pizza",
+  "Size": "S",
+  "Price": 12.75,
+  "Total Sales": 298,
+  "Total Revenue": 3799.5
+}, {
+  "No": 74,
+  "Name": "The Chicken Pesto Pizza",
+  "Size": "M",
+  "Price": 16.75,
+  "Total Sales": 276,
+  "Total Revenue": 4623
+}, {
+  "No": 75,
+  "Name": "The Chicken Pesto Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 399,
+  "Total Revenue": 8279.25
+}, {
+  "No": 76,
+  "Name": "The Spinach Pesto Pizza",
+  "Size": "S",
+  "Price": 12.5,
+  "Total Sales": 404,
+  "Total Revenue": 5050
+}, {
+  "No": 77,
+  "Name": "The Spinach Pesto Pizza",
+  "Size": "M",
+  "Price": 16.5,
+  "Total Sales": 282,
+  "Total Revenue": 4653
+}, {
+  "No": 78,
+  "Name": "The Spinach Pesto Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 284,
+  "Total Revenue": 5893
+}, {
+  "No": 79,
+  "Name": "The Soppressata Pizza",
+  "Size": "S",
+  "Price": 12.5,
+  "Total Sales": 288,
+  "Total Revenue": 3600
+}, {
+  "No": 80,
+  "Name": "The Soppressata Pizza",
+  "Size": "M",
+  "Price": 16.5,
+  "Total Sales": 268,
+  "Total Revenue": 4422
+}, {
+  "No": 81,
+  "Name": "The Soppressata Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 405,
+  "Total Revenue": 8403.75
+}, {
+  "No": 82,
+  "Name": "The Spinach Supreme Pizza",
+  "Size": "S",
+  "Price": 12.5,
+  "Total Sales": 400,
+  "Total Revenue": 5000
+}, {
+  "No": 83,
+  "Name": "The Spinach Supreme Pizza",
+  "Size": "M",
+  "Price": 16.5,
+  "Total Sales": 267,
+  "Total Revenue": 4405.5
+}, {
+  "No": 84,
+  "Name": "The Spinach Supreme Pizza",
+  "Size": "L",
+  "Price": 20.75,
+  "Total Sales": 283,
+  "Total Revenue": 5872.25
+}, {
+  "No": 85,
+  "Name": "The Calabrese Pizza",
+  "Size": "S",
+  "Price": 12.25,
+  "Total Sales": 99,
+  "Total Revenue": 1212.75
+}, {
+  "No": 86,
+  "Name": "The Calabrese Pizza",
+  "Size": "M",
+  "Price": 16.25,
+  "Total Sales": 562,
+  "Total Revenue": 9132.5
+}, {
+  "No": 87,
+  "Name": "The Calabrese Pizza",
+  "Size": "L",
+  "Price": 20.25,
+  "Total Sales": 276,
+  "Total Revenue": 5589
+}, {
+  "No": 88,
+  "Name": "The Mediterranean Pizza",
+  "Size": "S",
+  "Price": 12,
+  "Total Sales": 289,
+  "Total Revenue": 3468
+}, {
+  "No": 89,
+  "Name": "The Mediterranean Pizza",
+  "Size": "M",
+  "Price": 16,
+  "Total Sales": 275,
+  "Total Revenue": 4400
+}, {
+  "No": 90,
+  "Name": "The Mediterranean Pizza",
+  "Size": "L",
+  "Price": 20.25,
+  "Total Sales": 370,
+  "Total Revenue": 7492.5
+}, {
+  "No": 91,
+  "Name": "The Brie Carre Pizza",
+  "Size": "S",
+  "Price": 23.65,
+  "Total Sales": 490,
+  "Total Revenue": 11588.5
+}]
