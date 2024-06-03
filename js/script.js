@@ -1,25 +1,70 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const ctx = document.getElementById('chart');
-    
-    new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        datasets: [
-          {
-            label: 'Quantity Growth',
-            data: [-6.40 , 7.57 , -2.58 , 4.26 , -5.11 , 6.94 , -5.10 , -6.67 , -0.18 , 9.86 , 7.76 ],
-            borderColor: 'rgb(255, 224, 47)',
-            borderWidth: 2
-          },
-        ]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: false
-          }
+      const chartGrowth = document.getElementById("chartGrowth");
+      const filterMonthly = document.getElementById("filter_monthly");
+      let chartGrowthCanvas = null;
+
+      //melakukan update chart
+      const updateChartGrowth = (labels, data, monthly_filter = null) => {
+        let filter_labels = labels;
+        let filter_data = data;
+
+        if(monthly_filter !== null){
+          let index = monthly_filter - 1;
+
+          filter_labels = [];
+          filter_labels.push(lables[index]);
+
+          filter_data = [];
+          filter_data.push(data[index]);
+
+        } else{
+          filter_labels = labels
+          filter_data = data
         }
+      
+
+      //cek canvas
+      if(chartGrowthCanvas){
+        chartGrowthCanvas.destroy();
       }
-    });
-  });
+
+      chartGrowthCanvas = new Chart(chartGrowth, {
+        type : "line",
+        data : {
+            labels : filter_labels,
+            datasets : [
+              {
+                label : 'Quantity and Revenue Growth',
+                data : filter_data,
+                borderWidth : 1
+              }
+            ],
+        },
+      });
+    }
+    
+      //menampilkan data chart
+      const renderChartGrowth = (monthly_filter = null) => {
+        fetch('./json/revenue&quantitygrowth.json')
+        .then((response) => response.json())
+        .then((response) => {
+          let datasets = response.datasets[0]
+          updateChartGrowth(datasets.labels, datasets.data, monthly_filter)
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+      };
+
+      renderChartGrowth();
+
+      //update chart
+      filterMonthly.addEventListener("input", function() {
+        let month = null;
+
+        if (filterMonthly.value !== ""){
+        month = filterMonthly.value;
+        }
+          
+        renderChartGrowth(month);
+      });
+      

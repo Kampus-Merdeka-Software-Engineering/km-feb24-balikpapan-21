@@ -243,12 +243,13 @@ main .insights > div span{
 }
 
 #chart,
-#chart-1{
+#chartGrowth{
   max-width: 100%;
   height: auto;
 }
 
-#filter_growth{
+#filterGrowth, 
+#filterCategory{
   width: 40%;
   height: 100%;
   margin-left: 165%;
