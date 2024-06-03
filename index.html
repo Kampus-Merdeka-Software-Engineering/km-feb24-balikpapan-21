@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,24 +23,18 @@
         </div>
 
         <div class="sidebar">
-          <a href="#" class="active">
+          <a href="./index.html" class="menu-item">
             <span class="material-icons-sharp"></span>
             <h3>Dashboard</h3>
           </a>
-          <a href="#">
-            <span class="material-icons-sharp"></span>
-            <h3>Sales</h3>
-          </a>
-          <a href="#">
+          <a href="./about.html"class="menu-item">
             <span class="material-icons-sharp"></span>
             <h3>About Us</h3>
           </a>
-          <a href="#">
-            <span class="material-icons-sharp"></span>
-            <h3>Support</h3>
-          </a>
-        </div>
+          <div class="footer">Design by: Team Balikpapan 21 - 2024</div> 
+          <script src="./js/script.js"></script>
 
+        </div>     
       </aside>
 
       <main>
@@ -52,19 +45,19 @@
           <div class="filter-wrap">
             <div class="filter">
               <select name="" id="filter_monthly">
-                <option value="">Semua Bulan</option>
-                <option value="1">Januari</option>
-                <option value="2">Februari</option>
-                <option value="3">Maret</option>
+                <option value="">All</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
                 <option value="4">April</option>
-                <option value="5">Mei</option>
-                <option value="6">Juni</option>
-                <option value="7">Juli</option>
-                <option value="8">Agustus</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
                 <option value="9">September</option>
-                <option value="10">Oktober</option>
+                <option value="10">October</option>
                 <option value="11">November</option>
-                <option value="12">Desember</option>
+                <option value="12">December</option>
               </select>
             </div>
           </div>
@@ -77,61 +70,6 @@
             <span class="material-icons-sharp">analytics</span>
             <h3>Total Sales</h3>
             <h1>49.574</h1>
-=======
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pizza Sales Dashboard</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
-</head>
-<body>
-  <div class="container">
-    <aside>
-      <div class="top">
-        <div class="logo">
-          <img src="./img/pizza.png">
-          <h2 class="name">PIZZA SALES</h2>
-        </div>
-      </div>
-      <div class="sidebar">
-        <a href="#" class="active">
-          <span class="material-icons-sharp"></span>
-          <h3>Dashboard</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"></span>
-          <h3>Sales</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"></span>
-          <h3>About Us</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"></span>
-          <h3>Support</h3>
-        </a>
-      </div>
-    </aside>
-    <main>
-      <h1>Dashboard Balikpapan 21</h1>
-      <div class="bar">
-      <div class="date">
-        <input type="date">
-      </div>
-      <div class="theme-btn">
-        <span class="material-icons-sharp active">light_mode</span>
-        <span class="material-icons-sharp">dark_mode</span>
-      </div>
-      </div>
-      <div class="insights">
-        <div class="sales">
-          <span class="material-icons-sharp">analytics</span>
-              <h3>Total Sales</h3>
-              <h1>49.574</h1>
->>>>>>> be547b6946b282392dbd811cf867c7b896c274c5
           </div>
 
           <div class="order">
@@ -155,45 +93,60 @@
           <div class="aov">
             <span class="material-icons-sharp">query_stats</span>
             <h3>AOV</h3>
-            <h1>459,9</h1>
+            <h1>38,33</h1>
           </div>
 
         </div>
 
-        <div class="list-chart"></div>
-
           <div class="chart">
-            <h2 class="quantity">Quantity and Revenue Growth</h2>
-            <div class="filter">
-              <select name="" id="filter_growth">
-                <option value="">Semua Kategori</option>
-                <option value="1">Revenue</option>
-                <option value="2">Quantity</option>
-              </select>
-            </div>
-            <canvas id="chartGrowth"></canvas>
+            <h2>Quantity and Revenue Growth</h2>
+          <br>
+          <label for="filter_monthly">Filter by Month: </label>
+          <br>
+          <label for="filter_growth">Filter by Growth Type: </label>
+          <select id="filter_growth">
+          <option value="0">All</option>
+          <option value="1">Quantity</option>
+          <option value="2">Revenue</option>
+          </select>
+          <canvas id="chartGrowth"></canvas>
             <script src="./js/growthChart.js"></script>
           </div>
   
           <div class="chart">
-            <h2 class="quantity">Pizza Sales based on Category</h2>
-
-            <div class="filter">
-              <select name="" id="filter_category">
-                <option value="">Semua Kategori</option>
-                <option value="1">Classic</option>
-                <option value="2">Supreme</option>
-                <option value="3">Veggie</option>
-                <option value="4">Chicken</option>
-              </select>
-            </div>
-
-            <canvas id="chartCategory"></canvas>
+            <h2>Pizza Sales based on Category</h2>
+          <br>
+          <label for="filter_monthly">Filter by Month: </label>
+          <br>
+          <label for="filter_category">Filter by Category: </label>
+          <select id="filter_category">
+          <option value="0">All</option>
+          <option value="1">Classic</option>
+          <option value="2">Supreme</option>
+          <option value="3">Veggie</option>
+          <option value="4">Chicken</option>
+          </select>
+          <canvas id="chartCategory" ></canvas>
+            <script src="./js/categoryChart.js"></script>
           </div>
 
           <div class="chart">
-            <h2 class="quantity">Pizza Sales based on Size</h2>
-            <canvas id="chartSizes"></canvas>
+            <h2>Pizza Sales based on Size</h2>
+          <br>
+          <label for="filter_monthly">Filter by Month:</label>
+          </br>
+          <label for="filter_size">Filter by Size:</label>
+          <select id="filter_size">
+          <option value="0">All Sizes</option>
+          <option value="1">S</option>
+          <option value="2">M</option>
+          <option value="3">L</option>
+          <option value="4">XL</option>
+          <option value="5">XXL</option>
+          </select>
+          
+          <canvas id="chartSizes"></canvas>
+            <script src="./js/sizeChart.js"></script>
           </div>
 
           <div class="chart">
@@ -213,11 +166,10 @@
             </table>
           </div>
 
-        </div>
 
       </main>
     </div>
-
+  
     <!-- import jquery and datables cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>

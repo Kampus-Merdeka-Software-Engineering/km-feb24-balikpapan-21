@@ -31,7 +31,7 @@ const updateTopChart = (labels, data, colors) => {
     });
 }
 
-// Render pie chart without filter
+// Render pie chart 
 const renderTopChart = () => {
     fetch('./json/top5pizza.json')
         .then(response => response.json())
@@ -51,7 +51,6 @@ const renderTopChart = () => {
 
 renderTopChart();
 
-// Helper function to generate random colors for datasets
 function getRandomColor(alpha = 1) {
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);

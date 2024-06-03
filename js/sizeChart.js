@@ -22,7 +22,7 @@ const updateChartSizes = (labels, datasets, monthly_filter = null) => {
     });
 }
 
-// Render chart with optional monthly filter
+// Render chart dengan monthly filter
 const renderChartSizes = (monthly_filter = null) => {
     fetch('./json/salesPizzabySize.json')
         .then(response => response.json())
@@ -32,7 +32,7 @@ const renderChartSizes = (monthly_filter = null) => {
             
             let datasetsToRender;
             if (selectedSize === "0") {
-                // Display all sizes
+                // menampilkan semua ukuran
                 datasetsToRender = allData.map(dataset => ({
                     label: dataset.label,
                     data: dataset.data,
@@ -63,19 +63,19 @@ const renderChartSizes = (monthly_filter = null) => {
 
 renderChartSizes();
 
-// Update chart based on monthly filter
+// Update chart berdasarkan monthly filter
 filterMonthly.addEventListener("input", function () {
     let month = filterMonthly.value ? filterMonthly.value : null;
     renderChartSizes(month);
 });
 
-// Update chart based on size filter
+// Update chart berdasarkan size filter
 filterSize.addEventListener("input", function () {
     let month = filterMonthly.value ? filterMonthly.value : null;
     renderChartSizes(month);
 });
 
-// Helper function to generate random colors for datasets
+// fungsi untuk memanggil warna random tiap dashboard di refresh
 function getRandomColor(alpha = 1) {
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);

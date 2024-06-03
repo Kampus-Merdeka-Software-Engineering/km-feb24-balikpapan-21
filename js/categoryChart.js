@@ -22,7 +22,7 @@ const updateChartCategory = (labels, datasets, monthly_filter = null) => {
     });
 }
 
-// Render chart with optional monthly filter
+// Render chart berdasarkan monthly filter
 const renderChartCategory = (monthly_filter = null) => {
     fetch('./json/salesPizzabyCategory.json')
         .then(response => response.json())
@@ -32,7 +32,7 @@ const renderChartCategory = (monthly_filter = null) => {
             
             let datasetsToRender;
             if (selectedCategory === "0") {
-                // Display all categories
+                // menampilkan all categories
                 datasetsToRender = allData.map(dataset => ({
                     label: dataset.labels,
                     data: dataset.data,
@@ -63,19 +63,19 @@ const renderChartCategory = (monthly_filter = null) => {
 
 renderChartCategory();
 
-// Update chart based on monthly filter
+// Update chart berdasarkan monthly filter
 filterMonthly.addEventListener("input", function () {
     let month = filterMonthly.value ? filterMonthly.value : null;
     renderChartCategory(month);
 });
 
-// Update chart based on category filter
+// Update chart berdasarkan category filter
 filterCategory.addEventListener("input", function () {
     let month = filterMonthly.value ? filterMonthly.value : null;
     renderChartCategory(month);
 });
 
-// Helper function to generate random colors for datasets
+// fungsi untuk warna chart
 function getRandomColor(alpha = 1) {
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);
