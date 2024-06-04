@@ -1,20 +1,38 @@
-$(document).ready( function () {
-  let tableBody = document.querySelector('tbody')
-  let templateData = ""
-  
-  for(let i=0; i<100; i++){
-    templateData += `
-      <tr>
-        <td>${1+i}</td>
-        <td>Paperoni ${1+i}</td>
-        <td>${Math.round(Math.random() * 100)}</td>
-        <td>$${Math.round(Math.random(1000) * 100)}</td>
-      </tr>
-    `
-  }
+$(document).ready(function() {
+  let tableBody = document.querySelector('tbody');
 
-  tableBody.innerHTML = templateData;
-  
-  // inisialisasi data tables
-  $('#myTable').DataTable();
+  fetch('./json/dataTable.json')
+      .then(response => response.json())
+      .then(dataTabel => {
+          let templateData = "";
+
+          dataTabel.forEach(item => {
+              templateData += `
+                  <tr>
+                      <td>${item.No}</td>
+                      <td>${item.Name}</td>
+                      <td>${item.Size}</td>
+                      <td>$${item.Price}</td>
+                      <td>${item["Total Sales"]}</td>
+                      <td>$${item["Total Revenue"]}</td>
+                  </tr>
+              `;
+          });
+
+          tableBody.innerHTML = templateData;
+
+          // Initialize DataTables
+          $('#pizzaTable').dataTable({
+              "pageLength": 10, // Number of entries per page
+              "searching": true, // Enable search functionality
+              "paging": true, // Enable pagination
+              "info": true, // Enable information display about table
+              "dom": '<"top"lf>rt<"bottom"ip><"clear">',
+                "initComplete": function() {
+                    let searchBox = $('#pizzaTable_filter input');
+                    searchBox.attr('placeholder', 'Search');
+                }
+          });
+      })
+      .catch(error => console.error('Error fetching the data:', error));
 });

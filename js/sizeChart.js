@@ -34,7 +34,7 @@ const renderChartSizes = (monthly_filter = null) => {
             if (selectedSize === "0") {
                 // menampilkan semua ukuran
                 datasetsToRender = allData.map(dataset => ({
-                    label: dataset.label,
+                    label: dataset.labels,
                     data: dataset.data,
                     borderWidth: 2,
                     borderColor: getRandomColor(),

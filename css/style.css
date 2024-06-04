@@ -25,26 +25,6 @@ body{
   color: #363949;
 }
 
-table{
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th{
-  background-color: rgb(248, 226, 31);
-  border: 1px solid black;
-  padding: 0.8rem;
-}
-
-td{
-  padding: 0.8rem;
-  border: 1px solid black
-}
-
-tr td:first-child{
-  text-align: center;
-}
-
 p{
   color: #677483;
 }
@@ -298,3 +278,85 @@ main .insights > div span{
       width: calc(33.33% - 10px); /* 33.33% untuk 3 kotak di baris selanjutnya, dikurangi 10px gap */
   }
 }
+
+/*style untuk table*/
+#pizzaTable{
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th {
+  color: white;
+    background-color: #bb2222;
+}
+th, td {
+    padding: 8px;
+    border: 1px solid black;
+    text-align: center;
+}
+}
+
+
+/* Style for the filter bar */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Ensure the filter bar is displayed as a single line */
+.dataTables_wrapper .dataTables_length select,
+.dataTables_wrapper .dataTables_filter input {
+    display: inline-block;
+    margin: 5px;
+    margin-left: 10px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    margin: 5px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #bb2222;
+    color: white;
+    text-decoration: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: black;  
+  background-color: white;
+}
+
+.dataTables_wrapper .dataTables_info {
+    padding: 8px 0;
+}
+
+.table-container {
+  margin: auto;
+    padding: 20px;
+}
+
+/* Custom layout for the DataTable elements */
+.dataTables_wrapper .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.dataTables_wrapper .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
