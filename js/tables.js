@@ -28,7 +28,7 @@ $(document).ready(function() {
               "paging": true, // Enable pagination
               "info": true, // Enable information display about table
               "dom": '<"top"lf>rt<"bottom"ip><"clear">',
-              "initComplete": function() {
+                "initComplete": function() {
                     let searchBox = $('#pizzaTable_filter input');
                     searchBox.attr('placeholder', 'Search');
                 }

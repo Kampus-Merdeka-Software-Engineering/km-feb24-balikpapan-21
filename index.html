@@ -176,29 +176,5 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="./js/tables.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
-    <script>
-      $(document).ready( function () {
-        let tableBody = document.querySelector('tbody')
-        let templateData = ""
-        
-        for(let i=0; i<100; i++){
-          templateData += `
-            <tr>
-              <td>${1+i}</td>
-              <td>Paperoni ${1+i}</td>
-              <td>${Math.round(Math.random() * 100)}</td>
-              <td>$${Math.round(Math.random(1000) * 100)}</td>
-            </tr>
-          `
-        }
-
-        tableBody.innerHTML = templateData;
-        
-        // inisialisasi data tables
-        $('#myTable').DataTable();
-      });
-    </script>
   </body>
 </html>
