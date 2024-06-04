@@ -10,12 +10,16 @@
   box-sizing: border-box;
 }
 
+html{
+  font-size: 12px;
+}
+
 body{
   width: 100vw;
   height: 100vh;
   font-family: poppins, sans-serif;
   font-size: 12px;
-  background-color: #f6f6f9;
+  background-color: #f9f9f6;
   user-select: none;
   overflow-x: hidden;
   color: #363949;
@@ -93,7 +97,7 @@ aside h3{
   font-weight: 500;
 }
 
-aside .top{
+.top{
   background: white;
   display: flex;
   align-items: center;
@@ -101,62 +105,70 @@ aside .top{
   margin-top: 1.4rem;
 }
 
-aside .logo{
+.logo{
   display: grid;
   padding: 10px;
 }
-aside .logo img{
+.logo img{
   width: 7rem;
   height: 7rem;
   margin-left: 1rem;
 }
 
-aside .sidebar{
-  background: #bb2222;
-  display: flex;
-  flex-direction: column;
-  height: 86vh;
-  position: relative;
-  top: 1rem;
+.sidebar {
+    background: #bb2222;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 1rem;
 }
 
-aside .sidebar a{
-  display: flex;
-  color: #ffffff;
-  margin-left: 2rem;
-  gap: 1rem;
-  align-items: center;
-  position: relative;
-  height: 3.7rem;
-  transition: all 300ms ease;
+.sidebar a {
+    display: flex;
+    color: #ffffff;
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
 }
 
-aside .sidebar a span{
-  font-size: 1.6rem;
-  transition: all 300ms ease;
+.sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
 }
 
-aside .sidebar a.active{
+.sidebar .menu-item.active {
   background: white;
   color: black;
   margin-left: 1rem;
 }
 
-aside .sidebar a.active:before{
+.sidebar .menu-item .active:before {
   content: '';
   width: 6px;
   height: 100%;
   background: #bb2222;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-aside .sidebar a:hover{
-  color: #bb2222;
+.sidebar a:hover,
+.sidebar a.menu-item .active {
+    color: #bb2222;
+    background: white;
+    color: black;
+    margin-left: 1rem;
 }
 
-aside .sidebar a:hover span{
-  margin-left: 1rem;
-  color: #bb2222;
+.sidebar a:hover span {
+    margin-left: 1rem;
+    color: #bb2222;
 }
+
 
 main{
   margin-top: 1.4rem;
@@ -218,35 +230,71 @@ main .insights > div span{
   font-size: 1.8rem;
 }
 
-.quantity{
-  padding: 0.8rem;
-}
 
-.list-chart{
-  width: 100%;
-  min-height: 500px;
-  margin-top: 32px;
+.footer {
+  margin-top: auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #444;
+  color: #fff;
 }
 
 .chart{
   width: 100%;
   min-height: 500px;
   background-color: white;
+  margin-top: 32px;
   margin-bottom: 32px;
   box-shadow: 0 2rem 2rem rgba(132, 139, 200, 0.18);
   border-radius: 1rem;
   padding: 2rem;
 }
 
-#chart,
-#chart-1{
+#chartGrowth, 
+#chartCategory,
+#chartSize {
   max-width: 100%;
   height: auto;
 }
 
-#filter_growth{
-  width: 40%;
-  height: 100%;
-  margin-left: 165%;
-  margin-right: 2px;
+/* Style for member cards */
+.member-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.member-card .card {
+  width: calc(25% - 15px); /* 25% untuk 1 kotak di baris pertama, dikurangi 15px gap */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.member-card .card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.member-card .card h3 {
+  margin: 5px 0;
+}
+
+.member-card .card p {
+  margin: 5px 0;
+  font-style: italic;
+}
+
+/* Set jumlah kartu per baris */
+@media (max-width: 768px) {
+  .member-card .card {
+      width: calc(33.33% - 10px); /* 33.33% untuk 3 kotak di baris selanjutnya, dikurangi 10px gap */
+  }
 }

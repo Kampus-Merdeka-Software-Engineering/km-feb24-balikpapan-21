@@ -23,18 +23,24 @@
         </div>
 
         <div class="sidebar">
-          <a href="./index.html" class="menu-item">
+          <a href="#" class="active">
             <span class="material-icons-sharp"></span>
             <h3>Dashboard</h3>
           </a>
-          <a href="./about.html"class="menu-item">
+          <a href="#">
+            <span class="material-icons-sharp"></span>
+            <h3>Sales</h3>
+          </a>
+          <a href="#">
             <span class="material-icons-sharp"></span>
             <h3>About Us</h3>
           </a>
-          <div class="footer">Design by: Team Balikpapan 21 - 2024</div> 
-          <script src="./js/script.js"></script>
+          <a href="#">
+            <span class="material-icons-sharp"></span>
+            <h3>Support</h3>
+          </a>
+        </div>
 
-        </div>     
       </aside>
 
       <main>
@@ -45,19 +51,19 @@
           <div class="filter-wrap">
             <div class="filter">
               <select name="" id="filter_monthly">
-                <option value="">All</option>
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
+                <option value="">Semua Bulan</option>
+                <option value="1">Januari</option>
+                <option value="2">Februari</option>
+                <option value="3">Maret</option>
                 <option value="4">April</option>
-                <option value="5">May</option>
-                <option value="6">June</option>
-                <option value="7">July</option>
-                <option value="8">August</option>
+                <option value="5">Mei</option>
+                <option value="6">Juni</option>
+                <option value="7">Juli</option>
+                <option value="8">Agustus</option>
                 <option value="9">September</option>
-                <option value="10">October</option>
+                <option value="10">Oktober</option>
                 <option value="11">November</option>
-                <option value="12">December</option>
+                <option value="12">Desember</option>
               </select>
             </div>
           </div>
@@ -93,64 +99,49 @@
           <div class="aov">
             <span class="material-icons-sharp">query_stats</span>
             <h3>AOV</h3>
-            <h1>38,33</h1>
+            <h1>459,9</h1>
           </div>
 
         </div>
 
+        <div class="list-chart"></div>
+
           <div class="chart">
-            <h2>Quantity and Revenue Growth</h2>
-          <br>
-          <label for="filter_monthly">Filter by Month: </label>
-          <br>
-          <label for="filter_growth">Filter by Growth Type: </label>
-          <select id="filter_growth">
-          <option value="0">All</option>
-          <option value="1">Quantity</option>
-          <option value="2">Revenue</option>
-          </select>
-          <canvas id="chartGrowth"></canvas>
+            <h2 class="quantity">Quantity and Revenue Growth</h2>
+            <div class="filter">
+              <select name="" id="filter_growth">
+                <option value="">Semua Kategori</option>
+                <option value="1">Revenue</option>
+                <option value="2">Quantity</option>
+              </select>
+            </div>
+            <canvas id="chartGrowth"></canvas>
             <script src="./js/growthChart.js"></script>
           </div>
   
           <div class="chart">
-            <h2>Pizza Sales based on Category</h2>
-          <br>
-          <label for="filter_monthly">Filter by Month: </label>
-          <br>
-          <label for="filter_category">Filter by Category: </label>
-          <select id="filter_category">
-          <option value="0">All</option>
-          <option value="1">Classic</option>
-          <option value="2">Supreme</option>
-          <option value="3">Veggie</option>
-          <option value="4">Chicken</option>
-          </select>
-          <canvas id="chartCategory" ></canvas>
-            <script src="./js/categoryChart.js"></script>
+            <h2 class="quantity">Pizza Sales based on Category</h2>
+
+            <div class="filter">
+              <select name="" id="filter_category">
+                <option value="">Semua Kategori</option>
+                <option value="1">Classic</option>
+                <option value="2">Supreme</option>
+                <option value="3">Veggie</option>
+                <option value="4">Chicken</option>
+              </select>
+            </div>
+
+            <canvas id="chartCategory"></canvas>
           </div>
 
           <div class="chart">
-            <h2>Pizza Sales based on Size</h2>
-          <br>
-          <label for="filter_monthly">Filter by Month:</label>
-          </br>
-          <label for="filter_size">Filter by Size:</label>
-          <select id="filter_size">
-          <option value="0">All Sizes</option>
-          <option value="1">S</option>
-          <option value="2">M</option>
-          <option value="3">L</option>
-          <option value="4">XL</option>
-          <option value="5">XXL</option>
-          </select>
-          
-          <canvas id="chartSizes"></canvas>
-            <script src="./js/sizeChart.js"></script>
+            <h2 class="quantity">Pizza Sales based on Size</h2>
+            <canvas id="chartSizes"></canvas>
           </div>
 
           <div class="chart">
-            <h2 class="quantity">Data Transaksi 100 hari Terakhir</h2>
+            <h2 class="quantity">Data Penjualan Pizza 100 Hari Terakhir</h2>
             <table id="myTable">
               <thead>
                 <tr>
@@ -166,34 +157,14 @@
             </table>
           </div>
 
+        </div>
 
       </main>
     </div>
-  
+
     <!-- import jquery and datables cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
-    <script>
-      $(document).ready( function () {
-        let tableBody = document.querySelector('tbody')
-        let templateData = ""
-        
-        for(let i=0; i<100; i++){
-          templateData += `
-            <tr>
-              <td>${1+i}</td>
-              <td>Paperoni ${1+i}</td>
-              <td>${Math.round(Math.random() * 100)}</td>
-              <td>$${Math.round(Math.random(1000) * 100)}</td>
-            </tr>
-          `
-        }
-
-        tableBody.innerHTML = templateData;
-        
-        // inisialisasi data tables
-        $('#myTable').DataTable();
-      });
-    </script>
+    <script src="./js/table.js"></script>
   </body>
 </html>
