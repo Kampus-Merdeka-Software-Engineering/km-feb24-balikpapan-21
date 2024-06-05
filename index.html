@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pizza Sales Dashboard</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
-</head>
-<body>
-  <div class="container">
-    <aside>
-      <div class="top">
-        <div class="logo">
-          <img src="./img/pizza.png">
-          <h2 class="name">PIZZA SALES</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Sales Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/style.css" />
+        <!-- import css data tables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="./img/pizza.png" />
+            <h2 class="name">PIZZA SALES</h2>
+          </div>
         </div>
-      </div>
-      <div class="sidebar">
-        <a href="#" class="active">
-          <span class="material-icons-sharp"></span>
-          <h3>Dashboard</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"></span>
-          <h3>Sales</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"></span>
-          <h3>About Us</h3>
-        </a>
-        <a href="#">
-          <span class="material-icons-sharp"></span>
-          <h3>Support</h3>
-        </a>
-      </div>
-    </aside>
-    <main>
-      <h1>Dashboard Balikpapan 21</h1>
-      <div class="bar">
-      <div class="date">
-        <input type="date">
-      </div>
-      <div class="theme-btn">
-        <span class="material-icons-sharp active">light_mode</span>
-        <span class="material-icons-sharp">dark_mode</span>
-      </div>
-      </div>
-      <div class="insights">
-        <div class="sales">
-          <span class="material-icons-sharp">analytics</span>
-              <h3>Total Sales</h3>
-              <h1>49.574</h1>
+
+        <div class="sidebar">
+          <a href="./index.html" class="menu-item">
+            <span class="material-icons-sharp"></span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="./about.html"class="menu-item">
+            <span class="material-icons-sharp"></span>
+            <h3>About Us</h3>
+          </a> 
+          <script src="./js/script.js"></script>
+
+        </div>     
+      </aside>
+
+      <main>
+        <h1>Dashboard Balikpapan 21</h1>
+
+        <div class="bar">
+
+          <div class="filter-wrap">
+            <div class="filter">
+              <select name="" id="filter_monthly">
+                <option value="">All</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="insights">
+
+          <div class="sales">
+            <span class="material-icons-sharp">analytics</span>
+            <h3>Total Sales</h3>
+            <h1>49.574</h1>
           </div>
 
           <div class="order">
@@ -76,39 +92,73 @@
           <div class="aov">
             <span class="material-icons-sharp">query_stats</span>
             <h3>AOV</h3>
-            <h1>459,9</h1>
+            <h1>38,33</h1>
           </div>
 
         </div>
 
-        <div class="list-chart">
-
           <div class="chart">
-            <h2 class="quantity">Quantity Growth</h2>
-            <div class="filter">
-              <select name="" id="filter_growth">
-                <option value="01">Semua Kategori</option>
-                <option value="02">Revenue</option>
-                <option value="03">Quantity</option>
-              </select>
-            </div>
-            <canvas id="chart"></canvas>
+            <h2>Quantity and Revenue Growth</h2>
+          <br>
+          <label for="filter_monthly">Filter by Month: </label>
+          <br>
+          <label for="filter_growth">Filter by Growth Type: </label>
+          <select id="filter_growth">
+          <option value="0">All</option>
+          <option value="1">Quantity</option>
+          <option value="2">Revenue</option>
+          </select>
+          <canvas id="chartGrowth"></canvas>
+            <script src="./js/growthChart.js"></script>
           </div>
   
           <div class="chart">
-            <h2 class="quantity">Quantity Growth</h2>
-            <canvas id="chart-2"></canvas>
+            <h2>Pizza Sales based on Category</h2>
+          <br>
+          <label for="filter_monthly">Filter by Month: </label>
+          <br>
+          <label for="filter_category">Filter by Category: </label>
+          <select id="filter_category">
+          <option value="0">All</option>
+          <option value="1">Classic</option>
+          <option value="2">Supreme</option>
+          <option value="3">Veggie</option>
+          <option value="4">Chicken</option>
+          </select>
+          <canvas id="chartCategory" ></canvas>
+            <script src="./js/categoryChart.js"></script>
           </div>
 
           <div class="chart">
-            <h2 class="quantity">Data Transaksi 100 hari Terakhir</h2>
-            <table id="myTable">
+            <h2>Pizza Sales based on Size</h2>
+          <br>
+          <label for="filter_monthly">Filter by Month:</label>
+          </br>
+          <label for="filter_size">Filter by Size:</label>
+          <select id="filter_size">
+          <option value="0">All Sizes</option>
+          <option value="1">S</option>
+          <option value="2">M</option>
+          <option value="3">L</option>
+          <option value="4">XL</option>
+          <option value="5">XXL</option>
+          </select>
+          
+          <canvas id="chartSizes"></canvas>
+            <script src="./js/sizeChart.js"></script>
+          </div>
+
+          <div class="chart">
+            <h2 class="quantity">Pizza Sales Data</h2>
+            <table id="pizzaTable">
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Nama Pizza</th>
-                  <th>Total Terjual</th>
-                  <th>Total Pendapatan</th>
+                  <th>Pizza Name</th>
+                  <th>Size</th>
+                  <th>Price</th>
+                  <th>Total Sales</th>
+                  <th>Total Revenue</th>
                 </tr>
               </thead>
               <tbody>
@@ -117,36 +167,13 @@
             </table>
           </div>
 
-        </div>
 
       </main>
     </div>
-
-
+  
     <!-- import jquery and datables cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
-    <script>
-      $(document).ready( function () {
-        let tableBody = document.querySelector('tbody')
-        let templateData = ""
-        
-        for(let i=0; i<100; i++){
-          templateData += `
-            <tr>
-              <td>${1+i}</td>
-              <td>Paperoni ${1+i}</td>
-              <td>${Math.round(Math.random() * 100)}</td>
-              <td>$${Math.round(Math.random(1000) * 100)}</td>
-            </tr>
-          `
-        }
-
-        tableBody.innerHTML = templateData;
-        
-        // inisialisasi data tables
-        $('#myTable').DataTable();
-      });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="./js/tables.js"></script>
   </body>
 </html>
