@@ -26,115 +26,97 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-/* I Putu Wira Adi Gunawan
-Khalilah Ramadhania Handoko
-M Daffa Abdillah
-Muhammad Adam Khairi
-Muhammad Giyas Wisnu Rizqi
-Nasswa Maura Syawalia
-Rika Usmawati
-Safira Aulia
-Yati Elisa
-Zulfia Fitriana 
-
-"Project Leader: Muhammad Adam Khairi
-Front End Engineer: Dean Rizqullah Ananda, Farhan Difa Chairullah, I Putu Wira Adi Gunawan, Nasswa Maura Syawalia
-Deployment Team: Yati Elisa, Khalilah Ramadhania Handoko
-Pitch Deck Team: M Daffa Abdillah, Safira Aulia, Rika Usmawati
-Quality Assurance: Muhammad Giyas Wisnu Rizqi, Zulfia Fitriana"
-*/
-
 // Add card-member using DOM manipulation
 // Define an array of member objects
-var members = [
-  {
-    name: 'Muhammad Giyas Wisnu Rizqi',
-    role: 'Quality Assurance',
-    img: './img/giyas.jpg'
-  },
-  {
-    name: 'Farhan Difa Chairullah',
-    role: 'Front-End',
-    img: './img/farhan.jpg'
-  },
+let members = [
   {
     name: 'Muhammad Adam Khairi',
     role: 'Team Leader',
-    img: './img/adam.png'
+    img: 'adam.png',
+    id: 'adam'
   },
   {
     name: 'Dean Rizqullah Ananda',
     role: 'Front-End',
-    img: './img/dean.png'
+    img: 'dean.jpg',
+    id: 'dean'
   },
   {
-    name: '',
-    role: '',
-    img: '/img/adam.png'
+    name: 'Farhan Difa Chairullah',
+    role: 'Front-End',
+    img: 'farhan.jpg',
+    id: 'farhan'
   },
   {
-    name: '',
-    role: '',
-    img: '/img/adam.png'
+    name: 'I Putu Wira Adi Gunawan',
+    role: 'Front-End',
+    img: 'wira.png',
+    id: 'wira'
   },
   {
-    name: '',
-    role: '',
-    img: '/img/adam.png'
+    name: 'Nasswa Maura Syawalia',
+    role: 'Front-End',
+    img: 'nasswa.png',
+    id: 'nasswa'
   },
   {
-    name: '',
-    role: '',
-    img: '/img/adam.png'
+    name: 'Khalilah Ramadhania Handoko',
+    role: 'Deployment',
+    img: 'khalilah.jpg',
+    id: 'lila'
   },
   {
-    name: '',
-    role: '',
-    img: '/img/adam.png'
+    name: 'Yati Elisa',
+    role: 'Deployment',
+    img: 'yati.jpeg',
+    id: 'yati'
   },
   {
-    name: '',
-    role: '',
-    img: '/img/adam.png'
+    name: 'M Daffa Abdillah',
+    role: 'Pitch Deck',
+    img: 'daffa.png',
+    id: 'daffa'
   },
   {
-    name: '',
-    role: '',
-    img: '/img/adam.png'
+    name: 'Rika Usmawati',
+    role: 'Pitch Deck',
+    img: 'rika.jpeg',
+    id: 'rika'
   },
   {
-    name: '',
-    role: '',
-    img: '/img/adam.png'
+    name: 'Safira Aulia',
+    role: 'Pitch Deck',
+    img: 'safira.png',
+    id: 'safira'
+  },
+  {
+    name: 'Zulfia Fitriana',
+    role: 'Quality Assurance',
+    img: 'zulfia.png',
+    id: 'zulfia'
+  },
+  {
+    name: 'Muhammad Giyas Wisnu Rizqi',
+    role: 'Quality Assurance',
+    img: 'giyas.jpg',
+    id: 'giyas'
   },
   // Add more members as needed
-];
+  ];
 
 // Get the container where you want to add the members
-var container = document.getElementById('members-container');
+let container = document.querySelector('.members-container');
 
 // Iterate over the members array
+let listMembersHTML = ""
 members.forEach(member => {
-  // Create a new div element for each member
-  var div = document.createElement('div');
-  div.className = 'card';
-
-  // Add the member's image
-  var img = document.createElement('img');
-  img.src = member.img;
-  img.id = member.name.split(' ').join('-').toLowerCase();
-  div.appendChild(img);
-
-  // Add the member's name
-  var h3 = document.createElement('h3');
-  h3.textContent = member.name;
-  div.appendChild(h3);
-
-  // Add the member's role
-  var p = document.createElement('p');
-  p.textContent = member.role;
-  div.appendChild(p);
-
-  // Add the div to the container
-  container.appendChild(div);
+  listMembersHTML += `
+    <div class="card" id="${member.id}">
+      <img src="./img/${member.img}">
+      <h3>${member.name}</h3>
+      <p>${member.role}</p>
+    </div>
+    `
 });
+container.innerHTML = listMembersHTML
+console.log(listMembersHTML)

@@ -239,7 +239,7 @@ main .insights > div span{
 }
 
 /* Style for member cards */
-.member-card {
+.members-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -247,7 +247,7 @@ main .insights > div span{
   margin-top: 20px;
 }
 
-.member-card .card {
+.members-container .card {
   width: calc(25% - 15px); /* 25% untuk 1 kotak di baris pertama, dikurangi 15px gap */
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -255,7 +255,7 @@ main .insights > div span{
   text-align: center;
 }
 
-.member-card .card img {
+.members-container .card img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -263,11 +263,11 @@ main .insights > div span{
   margin-bottom: 10px;
 }
 
-.member-card .card h3 {
+.members-container .card h3 {
   margin: 5px 0;
 }
 
-.member-card .card p {
+.members-container .card p {
   margin: 5px 0;
   font-style: italic;
 }
