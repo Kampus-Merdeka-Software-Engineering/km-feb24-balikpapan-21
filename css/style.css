@@ -20,9 +20,23 @@ body{
   font-family: poppins, sans-serif;
   font-size: 12px;
   background-color: #f9f9f6;
-  user-select: none;
+  user-select: auto;
   overflow-x: hidden;
   color: #363949;
+}
+
+header {
+  height: 10vh;
+  padding: 5px;
+  background-color: #bb2222;
+  display: flex;
+  align-items: center;
+}
+
+.main-title {
+  color: #ffffff;
+  font-family: poppins;
+
 }
 
 p{
@@ -60,7 +74,7 @@ h3{
 .container{
   display: grid;
   margin: 0 auto;
-  width: 98%;
+
   gap: 30px;
   grid-template-columns: 16rem auto 0rem;
 }
@@ -69,8 +83,8 @@ aside{
   height: 100vh;
   background: #bb2222;
   position: sticky;
-  top: 0;
-  left: 2rem;
+  top: 0px;
+  left: 0px;
 }
 
 aside h3{
@@ -96,12 +110,12 @@ aside h3{
 }
 
 .sidebar {
-    background: #bb2222;
-    display: flex;
-    flex-direction: column;
-    height: 86vh;
-    position: relative;
-    top: 1rem;
+  background: #bb2222;
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 1rem;
 }
 
 .sidebar a {
