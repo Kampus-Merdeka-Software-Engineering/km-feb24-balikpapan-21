@@ -12,164 +12,156 @@
 
   </head>
   <body>
-    <div class="container">
+    <header>
+      <figure class="logo">
+          <img src="./img/pizza.png"/>
+      </figure>
+      <h1 class="main-title">Pizza Sales</h1>
+  </header>
 
-      <aside>
-        <div class="top">
-          <div class="logo">
-            <img src="./img/pizza.png" />
-            <h2 class="name">PIZZA SALES</h2>
-          </div>
-        </div>
+  <nav class="navbar">
+      <a href="./index.html" class="menu-item">
+          <h3>Dashboard</h3>
+      </a>
+      <a href="./about.html" class="menu-item">
+          <h3>About Us</h3>
+      </a>
+  </nav>
 
-        <div class="sidebar">
-          <a href="./index.html" class="menu-item">
-            <span class="material-icons-sharp"></span>
-            <h3>Dashboard</h3>
-          </a>
-          <a href="./about.html"class="menu-item">
-            <span class="material-icons-sharp"></span>
-            <h3>About Us</h3>
-          </a> 
-          <script src="./js/script.js"></script>
+  <main class="">
+    
+    <section class="title" data-aos="fade-left">
+      <h2>Pizza Sales Dashboard</h2>
+    </section>
 
-        </div>     
-      </aside>
+    <section class="bar">
 
-      <main>
-        <h1>Dashboard Balikpapan 21</h1>
-
-        <div class="bar">
-
-          <div class="filter-wrap">
-            <div class="filter">
-              <select name="" id="filter_monthly">
-                <option value="">All</option>
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
-                <option value="4">April</option>
-                <option value="5">May</option>
-                <option value="6">June</option>
-                <option value="7">July</option>
-                <option value="8">August</option>
-                <option value="9">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-              </select>
-            </div>
-          </div>
-          
-        </div>
-
-        <div class="insights">
-
-          <div class="sales">
-            <span class="material-icons-sharp">analytics</span>
-            <h3>Total Sales</h3>
-            <h1>49.574</h1>
-          </div>
-
-          <div class="order">
-            <span class="material-icons-sharp">bar_chart</span>
-            <h3>Orders</h3>
-            <h1>21.350</h1>
-          </div>
-
-          <div class="revenue">
-            <span class="material-icons-sharp">show_chart</span>
-            <h3>Total Revenue</h3>
-            <h1>$817.860</h1>
-          </div>
-
-          <div class="abs">
-            <span class="material-icons-sharp">shopping_basket</span>
-            <h3>ABS</h3>
-            <h1>2,32</h1>
-          </div>
-
-          <div class="aov">
-            <span class="material-icons-sharp">query_stats</span>
-            <h3>AOV</h3>
-            <h1>38,33</h1>
-          </div>
-
-        </div>
-
-          <div class="chart">
-            <h2>Quantity and Revenue Growth</h2>
-          <br>
-          <label for="filter_monthly">Filter by Month: </label>
-          <br>
-          <label for="filter_growth">Filter by Growth Type: </label>
-          <select id="filter_growth">
-          <option value="0">All</option>
-          <option value="1">Quantity</option>
-          <option value="2">Revenue</option>
+      <div class="filter-wrap">
+        <div class="filter">
+          <select name="" id="filter_monthly">
+            <option value="">All</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
           </select>
-          <canvas id="chartGrowth"></canvas>
-            <script src="./js/growthChart.js"></script>
-          </div>
-  
-          <div class="chart">
-            <h2>Pizza Sales based on Category</h2>
-          <br>
-          <label for="filter_monthly">Filter by Month: </label>
-          <br>
-          <label for="filter_category">Filter by Category: </label>
-          <select id="filter_category">
-          <option value="0">All</option>
-          <option value="1">Classic</option>
-          <option value="2">Supreme</option>
-          <option value="3">Veggie</option>
-          <option value="4">Chicken</option>
-          </select>
-          <canvas id="chartCategory" ></canvas>
-            <script src="./js/categoryChart.js"></script>
-          </div>
+        </div>
+      </div>
+      
+    </section>
 
-          <div class="chart">
-            <h2>Pizza Sales based on Size</h2>
-          <br>
-          <label for="filter_monthly">Filter by Month:</label>
-          </br>
-          <label for="filter_size">Filter by Size:</label>
-          <select id="filter_size">
-          <option value="0">All Sizes</option>
-          <option value="1">S</option>
-          <option value="2">M</option>
-          <option value="3">L</option>
-          <option value="4">XL</option>
-          <option value="5">XXL</option>
-          </select>
-          
-          <canvas id="chartSizes"></canvas>
-            <script src="./js/sizeChart.js"></script>
-          </div>
+    <div class="insights">
 
-          <div class="chart">
-            <h2 class="quantity">Pizza Sales Data</h2>
-            <table id="pizzaTable">
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Pizza Name</th>
-                  <th>Size</th>
-                  <th>Price</th>
-                  <th>Total Sales</th>
-                  <th>Total Revenue</th>
-                </tr>
-              </thead>
-              <tbody>
-               
-              </tbody>
-            </table>
-          </div>
+      <div class="sales">
+        <span class="material-icons-sharp">analytics</span>
+        <h3>Total Sales</h3>
+        <h1>49.574</h1>
+      </div>
 
+      <div class="order">
+        <span class="material-icons-sharp">bar_chart</span>
+        <h3>Orders</h3>
+        <h1>21.350</h1>
+      </div>
 
-      </main>
+      <div class="revenue">
+        <span class="material-icons-sharp">show_chart</span>
+        <h3>Total Revenue</h3>
+        <h1>$817.860</h1>
+      </div>
+
+      <div class="abs">
+        <span class="material-icons-sharp">shopping_basket</span>
+        <h3>ABS</h3>
+        <h1>2,32</h1>
+      </div>
+
+      <div class="aov">
+        <span class="material-icons-sharp">query_stats</span>
+        <h3>AOV</h3>
+        <h1>38,33</h1>
+      </div>
+
     </div>
+
+      <div class="chart">
+        <h2>Quantity and Revenue Growth</h2>
+      <br>
+      <label for="filter_monthly">Filter by Month: </label>
+      <br>
+      <label for="filter_growth">Filter by Growth Type: </label>
+      <select id="filter_growth">
+      <option value="0">All</option>
+      <option value="1">Quantity</option>
+      <option value="2">Revenue</option>
+      </select>
+      <canvas id="chartGrowth"></canvas>
+        <script src="./js/growthChart.js"></script>
+      </div>
+
+      <div class="chart">
+        <h2>Pizza Sales based on Category</h2>
+      <br>
+      <label for="filter_monthly">Filter by Month: </label>
+      <br>
+      <label for="filter_category">Filter by Category: </label>
+      <select id="filter_category">
+      <option value="0">All</option>
+      <option value="1">Classic</option>
+      <option value="2">Supreme</option>
+      <option value="3">Veggie</option>
+      <option value="4">Chicken</option>
+      </select>
+      <canvas id="chartCategory" ></canvas>
+        <script src="./js/categoryChart.js"></script>
+      </div>
+
+      <div class="chart">
+        <h2>Pizza Sales based on Size</h2>
+      <br>
+      <label for="filter_monthly">Filter by Month:</label>
+      </br>
+      <label for="filter_size">Filter by Size:</label>
+      <select id="filter_size">
+      <option value="0">All Sizes</option>
+      <option value="1">S</option>
+      <option value="2">M</option>
+      <option value="3">L</option>
+      <option value="4">XL</option>
+      <option value="5">XXL</option>
+      </select>
+      
+      <canvas id="chartSizes"></canvas>
+        <script src="./js/sizeChart.js"></script>
+      </div>
+
+      <div class="chart">
+        <h2 class="quantity">Pizza Sales Data</h2>
+        <table id="pizzaTable">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Pizza Name</th>
+              <th>Size</th>
+              <th>Price</th>
+              <th>Total Sales</th>
+              <th>Total Revenue</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
+  </main>
   
     <!-- import jquery and datables cdn -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
