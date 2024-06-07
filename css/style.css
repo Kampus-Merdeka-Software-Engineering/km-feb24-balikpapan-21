@@ -26,7 +26,7 @@ body{
 }
 
 header {
-  height: 10vh;
+  height: 8%;
   padding: 5px;
   background-color: #bb2222;
   display: flex;
@@ -36,7 +36,66 @@ header {
 .main-title {
   color: #ffffff;
   font-family: poppins;
+  margin-left: 1rem;
+}
 
+.logo {
+  padding: 1px;
+}
+
+img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.navbar {
+  height: 5vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  margin-bottom: 5px;
+  background-color: #d63636;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.title {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu-item {
+  width: 8vw;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+  background: white;
+  color: black;
+
+}
+
+footer {
+  background-color: #363949;
+  margin-top: 10px;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-title {
+  color: #ccc;
+  font-size: 1rem;
 }
 
 p{
@@ -71,12 +130,16 @@ h3{
   margin: auto;
 }
 
-.container{
-  display: grid;
-  margin: 0 auto;
-
+.main-container {
+  max-width: fit-content;
+  width: 75%;
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
   gap: 30px;
-  grid-template-columns: 16rem auto 0rem;
+  user-select: none;
+
 }
 
 aside{
@@ -91,23 +154,15 @@ aside h3{
   font-weight: 500;
 }
 
-.top{
+/* .top{
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1.4rem;
-}
+} */
 
-.logo{
-  display: grid;
-  padding: 10px;
-}
-.logo img{
-  width: 7rem;
-  height: 7rem;
-  margin-left: 1rem;
-}
+
 
 .sidebar {
   background: #bb2222;
@@ -127,45 +182,6 @@ aside h3{
     position: relative;
     height: 3.7rem;
     transition: all 300ms ease;
-}
-
-.sidebar a span {
-    font-size: 1.6rem;
-    transition: all 300ms ease;
-}
-
-.sidebar .menu-item.active {
-  background: white;
-  color: black;
-  margin-left: 1rem;
-}
-
-.sidebar .menu-item .active:before {
-  content: '';
-  width: 6px;
-  height: 100%;
-  background: #bb2222;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.sidebar a:hover,
-.sidebar a.menu-item .active {
-    color: #bb2222;
-    background: white;
-    color: black;
-    margin-left: 1rem;
-}
-
-.sidebar a:hover span {
-    margin-left: 1rem;
-    color: #bb2222;
-}
-
-
-main{
-  margin-top: 1.4rem;
 }
 
 .bar{
@@ -275,6 +291,7 @@ main .insights > div span{
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 10px;
+  pointer-events: none;
 }
 
 .members-container .card h3 {

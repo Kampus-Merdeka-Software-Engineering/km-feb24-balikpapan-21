@@ -5,45 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza Sales Dashboard</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
     <header>
-        <h1 class="main-title">Balikpapan Team 21</h1>
+        <figure class="logo">
+            <img src="./img/pizza.png"/>
+        </figure>
+        <h1 class="main-title">Pizza Sales</h1>
     </header>
     <nav class="navbar">
-
+        <a href="./index.html" class="menu-item">
+            <h3>Dashboard</h3>
+        </a>
+        <a href="./about.html" class="menu-item">
+            <h3>About Us</h3>
+        </a>
     </nav>
-    <main class="container">
-        <aside>
-            <section class="top">
-                <figure class="logo">
-                    <img src="./img/pizza.png"/>
-                    <h2 class="name">PIZZA SALES</h2>
-                </figure>
-            </section>
-            <section class="sidebar">
-                <a href="./index.html" class="menu-item">
-                    <span class="material-icons-sharp"></span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="./about.html" class="menu-item">
-                    <span class="material-icons-sharp"></span>
-                    <h3>About Us</h3>
-                </a>
-                <div class="footer">Design by: Team Balikpapan 21 - 2024</div>
-            </section>     
-        </aside>
+    
+    <section class="title" data-aos="fade-left">
+        <h2>Balikpapan's Team 21 Background</h2>
+    </section>
 
-        <main>
-        
-            <!-- Members of team 21 -->
-            <section class="members-container">
-                <!-- Filled by JavaScript DOM method -->
-            </section>
-        </main>
+    <main class="main-container" data-aos="fade-up" data-aos-delay="500">
+        <!-- Members of team 21 -->
+        <section class="members-container">
+            <!-- Filled by JavaScript DOM method -->
+        </section>
     </main>
+
+    <footer>
+        <h2 class="footer-title">
+            Developed by Team 21 Balikpapan Section
+        </h2>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/script.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
 

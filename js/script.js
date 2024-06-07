@@ -50,7 +50,7 @@ let members = [
   {
     name: 'I Putu Wira Adi Gunawan',
     role: 'Front-End',
-    img: 'wira.png',
+    img: 'wira.jpg',
     id: 'wira'
   },
   {
@@ -74,7 +74,7 @@ let members = [
   {
     name: 'M Daffa Abdillah',
     role: 'Pitch Deck',
-    img: 'daffa.png',
+    img: 'daffa.jpg',
     id: 'daffa'
   },
   {
@@ -86,13 +86,13 @@ let members = [
   {
     name: 'Safira Aulia',
     role: 'Pitch Deck',
-    img: 'safira.png',
+    img: 'safira.jpg',
     id: 'safira'
   },
   {
     name: 'Zulfia Fitriana',
     role: 'Quality Assurance',
-    img: 'zulfia.png',
+    img: 'zulfia.jpg',
     id: 'zulfia'
   },
   {
