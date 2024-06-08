@@ -13,10 +13,18 @@ const updateChartSizes = (labels, datasets, monthly_filter = null) => {
         chartSizesCanvas.destroy();
     }
 
+    let labelsMonth = [];
+    if(monthly_filter === null){
+        labelsMonth = labels
+    }else{
+        let indexBulan = parseInt(monthly_filter) - 1
+        labelsMonth.push(monthLabels[indexBulan])
+    }
+
     chartSizesCanvas = new Chart(chartSizes, {
         type: "bar",
         data: {
-            labels: labels,
+            labels: labelsMonth,
             datasets: filteredDatasets
         },
     });

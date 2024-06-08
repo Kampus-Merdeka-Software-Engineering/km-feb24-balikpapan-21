@@ -11,8 +11,7 @@ const getFilteredData = (data, monthly_filter) => {
         return data;
     } else {
         const index = parseInt(monthly_filter) - 1;
-        const filteredData = new Array(monthLabels.length).fill(null);
-        filteredData[index] = data[index];
+        filteredData = [data[index]]
         return filteredData;
     }
 };
@@ -63,7 +62,7 @@ const renderChartGrowth = (monthly_filter = null) => {
             const quantityData = response.datasets.find(dataset => dataset.labels === "Quantity Growth").data;
             const revenueData = response.datasets.find(dataset => dataset.labels === "Revenue Growth").data;
 
-            updateChartGrowth(monthLabels, quantityData, revenueData, monthly_filter);
+            updateChartGrowth(monthLabels, quantityData, revenueData, null);
         })
         .catch(err => {
             console.log(err);
@@ -73,10 +72,10 @@ const renderChartGrowth = (monthly_filter = null) => {
 renderChartGrowth();
 
 // update chart berdasarkan filter bulan
-filterMonthly.addEventListener("input", function () {
+/* filterMonthly.addEventListener("input", function () {
     let month = filterMonthly.value ? filterMonthly.value : null;
     renderChartGrowth(month);
-});
+}); */
 
 // update chart berdasarkan growth filter
 filterGrowth.addEventListener("input", function () {

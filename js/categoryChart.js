@@ -13,10 +13,19 @@ const updateChartCategory = (labels, datasets, monthly_filter = null) => {
         chartCategoryCanvas.destroy();
     }
 
+    
+    let labelsMonth = [];
+    if(monthly_filter === null){
+        labelsMonth = labels
+    }else{
+        let indexBulan = parseInt(monthly_filter) - 1
+        labelsMonth.push(monthLabels[indexBulan])
+    }
+
     chartCategoryCanvas = new Chart(chartCategory, {
         type: "bar",
         data: {
-            labels: labels,
+            labels: labelsMonth,
             datasets: filteredDatasets
         },
     });

@@ -54,23 +54,14 @@ img {
   position: sticky;
   top: 0;
   z-index: 100;
-
-  margin-bottom: 5px;
   background-color: #d63636;
   display: flex;
   justify-content: flex-end;
   gap: 5px;
 }
-.title {
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
 
 .menu-item {
-  width: 8vw;
+  width: 100px;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -83,6 +74,14 @@ img {
   color: black;
 
 }
+.title {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 
 footer {
   background-color: #363949;
@@ -99,10 +98,7 @@ footer {
 }
 
 .dashboard-container {
-  margin-left: 15%;
-  margin-right: 10%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 20px 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -269,6 +265,7 @@ main .insights > div span{
   box-shadow: 0 2rem 2rem rgba(132, 139, 200, 0.18);
   border-radius: 1rem;
   padding: 2rem;
+  overflow-x: auto;
 }
 
 #chartGrowth, 
