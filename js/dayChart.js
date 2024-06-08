@@ -1,5 +1,5 @@
 const chartDay = document.getElementById("chartDay");
-const filterDay = document.getElementById("filter_Day");
+const filterDay = document.getElementById("filter_day");
 let chartDayCanvas = null;
 
 // Update chart
@@ -13,10 +13,19 @@ const updateChartDay = (labels, datasets, monthly_filter = null) => {
         chartDayCanvas.destroy();
     }
 
+
+    let labelsMonth = [];
+    if(monthly_filter === null){
+        labelsMonth = labels
+    }else{
+        let indexBulan = parseInt(monthly_filter) - 1
+        labelsMonth.push(monthLabels[indexBulan])
+    }
+
     chartDayCanvas = new Chart(chartDay, {
         type: "bar",
         data: {
-            labels: labels,
+            labels: labelsMonth,
             datasets: filteredDatasets
         },
     });
@@ -69,7 +78,7 @@ filterMonthly.addEventListener("input", function () {
     renderChartDay(month);
 });
 
-// Update chart berdasarkan Day filter
+// Update chart berdasarkan day filter
 filterDay.addEventListener("input", function () {
     let month = filterMonthly.value ? filterMonthly.value : null;
     renderChartDay(month);
