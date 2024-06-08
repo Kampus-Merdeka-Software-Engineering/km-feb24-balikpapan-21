@@ -131,7 +131,7 @@ h3{
 }
 
 .main-container {
-
+  max-width: fit-content;
   width: 75%;
   display: flex;
   position: relative;
