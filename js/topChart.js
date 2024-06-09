@@ -38,8 +38,8 @@ const renderTopChart = () => {
         .then(response => {
             const allData = response.datasets;
             
-            let labels = allData.map(dataset => dataset.label);
-            let dataValues = allData.map(dataset => dataset.data);
+            let labels = allData.map(dataset => dataset.labels);
+            let dataValues = allData.map(dataset => dataset.data.reduce((acc, cur) => acc+cur, 0));
             let colors = allData.map(() => getRandomColor(0.5));
 
             updateTopChart(labels, dataValues, colors);
