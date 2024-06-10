@@ -278,6 +278,7 @@ main .insights > div span{
 /* Style for member cards */
 .members-container {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 20px;
