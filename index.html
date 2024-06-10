@@ -98,14 +98,13 @@
       <div class="chart">
         <h2>Quantity and Revenue Growth</h2>
         <br />
-        <label for="filter_monthly">Filter by Month: </label>
-        <br />
         <label for="filter_growth">Filter by Growth Type: </label>
         <select id="filter_growth">
           <option value="0">All</option>
           <option value="1">Quantity</option>
           <option value="2">Revenue</option>
         </select>
+        <br />
         <canvas id="chartGrowth"></canvas>
         <script src="./js/growthChart.js"></script>
       </div>
@@ -128,9 +127,26 @@
 </div> -->
 
       <div class="chart">
+        <h2>Pizza Sales based on Day</h2>
+      <br />
+      <label for="filter_day">Filter by Day: </label>
+      <select id="filter_day">
+      <option value="0">All</option>
+      <option value="1">Monday</option>
+      <option value="2">Sunday</option>
+      <option value="3">Tuesday</option>
+      <option value="4">Wednesday</option>
+      <option value="5">Thursday</option>
+      <option value="6">Friday</option>
+      <option value="7">Saturday</option>
+      </select>
+      <br />
+      <canvas id="chartDay" ></canvas>
+        <script src="./js/dayChart.js"></script>
+      </div>
+
+      <div class="chart">
         <h2>Pizza Sales based on Category</h2>
-        <br />
-        <label for="filter_monthly">Filter by Month: </label>
         <br />
         <label for="filter_category">Filter by Category: </label>
         <select id="filter_category">
@@ -140,14 +156,13 @@
           <option value="3">Veggie</option>
           <option value="4">Chicken</option>
         </select>
+        <br />
         <canvas id="chartCategory"></canvas>
         <script src="./js/categoryChart.js"></script>
       </div>
 
       <div class="chart">
         <h2>Pizza Sales based on Size</h2>
-        <br />
-        <label for="filter_monthly">Filter by Month:</label>
         <br />
         <label for="filter_size">Filter by Size:</label>
         <select id="filter_size">
@@ -158,7 +173,7 @@
           <option value="4">XL</option>
           <option value="5">XXL</option>
         </select>
-
+        <br />
         <canvas id="chartSizes"></canvas>
         <script src="./js/sizeChart.js"></script>
       </div>
