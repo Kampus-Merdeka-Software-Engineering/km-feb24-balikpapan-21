@@ -15,8 +15,7 @@
       href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -94,7 +93,6 @@
         </div>
       </div>
 
-      
       <div class="chart">
         <h2>Quantity and Revenue Growth</h2>
         <br />
@@ -128,20 +126,20 @@
 
       <div class="chart">
         <h2>Pizza Sales based on Day</h2>
-      <br />
-      <label for="filter_day">Filter by Day: </label>
-      <select id="filter_day">
-      <option value="0">All</option>
-      <option value="1">Monday</option>
-      <option value="2">Sunday</option>
-      <option value="3">Tuesday</option>
-      <option value="4">Wednesday</option>
-      <option value="5">Thursday</option>
-      <option value="6">Friday</option>
-      <option value="7">Saturday</option>
-      </select>
-      <br />
-      <canvas id="chartDay" ></canvas>
+        <br />
+        <label for="filter_day">Filter by Day: </label>
+        <select id="filter_day">
+          <option value="0">All</option>
+          <option value="1">Monday</option>
+          <option value="2">Sunday</option>
+          <option value="3">Tuesday</option>
+          <option value="4">Wednesday</option>
+          <option value="5">Thursday</option>
+          <option value="6">Friday</option>
+          <option value="7">Saturday</option>
+        </select>
+        <br />
+        <canvas id="chartDay"></canvas>
         <script src="./js/dayChart.js"></script>
       </div>
 
@@ -180,7 +178,7 @@
 
       <div class="chart">
         <h2>Top 5 Pizza</h2>
-      <canvas id="chartTop" ></canvas>
+        <canvas id="chartTop"></canvas>
         <script src="./js/topChart.js"></script>
       </div>
 
@@ -211,8 +209,8 @@
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="./js/tables.js"></script>
     <script src="./js/script.js"></script>
-    <script>AOS.init();</script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
-
-

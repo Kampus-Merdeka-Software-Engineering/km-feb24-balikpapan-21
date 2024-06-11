@@ -270,7 +270,7 @@ main .insights > div span{
 
 #chartGrowth, 
 #chartCategory,
-#chartSize {
+#chartSizes {
   max-width: 100%;
   height: auto;
 }
